@@ -209,7 +209,7 @@ button:hover {
 /* --- ABOUT ME PAGE --- */
 .page-about-me {
     min-height: 900px;
-    height: 1000px;
+    max-height: 100%;
     color: white;
 }
 
@@ -262,6 +262,8 @@ button:hover {
     width: 90%;
     left: 5%;
     padding-bottom: 80px;
+    display: flex; 
+    justify-content: left; 
 }
 
 .skills-left {
@@ -273,6 +275,17 @@ button:hover {
     width: 40%;
     left: 5%;
     padding: 60px 30px;
+}
+
+.skills-hr {
+    display: flex; 
+    justify-content: left;
+    margin-left: 5%;
+    width: 90%;
+    height: 6px; 
+    background-color: #00ff88; 
+    margin-top: -20px; 
+    margin-bottom: 60px;
 }
 
 .skills-right {
@@ -314,6 +327,7 @@ button:hover {
 .skills-right h3 {
     display: flex;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
 .skills-left li,
@@ -537,3 +551,214 @@ footer p {
 }
 
 /* -------------- FOOTER END ------------- */
+
+/* -------------- RESPONSIVENESS START ------------- */
+
+/* Mobile Phones */
+@media only screen and (max-width: 600px) {
+    * {
+        text-align: center;
+    }
+
+    .gutters {
+        left: 0;
+        width: 100%;
+    }
+
+    .page-headings {
+        padding: 20px;
+        font-size: 24px;
+    }
+
+    .page-about-me {
+        min-height: 750px;
+        max-height: 100%;
+    }
+
+    .page-about-me p {
+        font-size: 16px;
+        padding: 20px 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .page-about-me h1 {
+        font-size: 50px;
+        padding: 60px 0;
+        width: 100%;
+    }
+
+    .page-success-story p {
+        font-size: 14px;
+    }
+    
+    .page-skills h1 {
+        margin-bottom: -20px;
+    }
+
+    .skills-section {
+        display: block;
+        padding-bottom: 0px;
+    }
+
+    .skills-section ul {
+        font-size: 20px;
+        list-style-position: inside;
+        padding-top: 0px;
+    }
+
+    .skills-left {
+        border-style: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .skills-left ul {
+        padding-top: 30px;
+    }
+
+    .skills-hr {
+        margin-top: 40px; 
+        margin-bottom: 40px;
+    }
+    
+    .skills-right {
+        border-style: none;
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin-top: -10px;
+    }
+
+    .skills-right ul {
+        margin-left: 0;
+        padding-top: 30px;
+    }
+
+    .skills-left h3,
+    .skills-right h3 {
+        padding-bottom: 0px;
+        font-size: 20px;
+    }
+
+    .skills-left li,
+    .skills-right li {
+        list-style-type: none;
+        font-size: 12px;
+        padding: 5px 0;
+        /* Below resets the list into 1 column */
+        float: none;
+        width: 100%;
+    }
+
+    .bkgExp {
+        visibility: hidden;
+    }
+
+    .dot {
+        visibility: hidden;
+    }
+
+    .vl {
+        visibility: hidden;
+    }
+
+    .exp-left {
+        margin-left: 15%;
+        width: 70%;
+        height: 100%;
+        text-align: none;
+        margin-top: -15px;
+        padding-bottom: 30px;
+    }
+    
+    .exp-right {
+        margin-left: 15%;
+        width: 70%;
+        height: 100%;
+        margin-top: -15px;
+        padding-bottom: 30px;
+    }
+
+    .exp-section h1 {
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+    
+    .exp-section h2 {
+        font-size: 14px;
+        color: #00ff88;
+    }
+    
+    .exp-section h3 {
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+    
+    .exp-section p {
+        font-size: 14px;
+    }
+
+    .wwm-section {
+        display: block; 
+        padding-bottom: 50px;
+        align-items: center;
+    }
+
+    .wwm-section h1 {
+        font-size: 20px;
+    }
+
+    .wwm-left {
+        width: 100%;
+        height: 100%;
+        padding: 30px 0;
+        border-style: none;
+    }
+    
+    .wwm-right {
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 30px 0;
+        border-style: none;
+    }
+
+    .wwm-left label {
+        margin-left: 0;
+        color: white;
+        font-size: 16px;
+    }
+
+    .wwm-right label {
+        margin-left: 0;
+        display: inline-block;
+        max-width: 80%;
+        font-size: 14px;
+    }
+
+    .contact-details {
+        margin-left: 0% !important;
+        display: inline;
+    }
+
+    .wwm-right h3 {
+        font-size: 16px;
+    }
+
+    .wwm-section input {
+        margin-left: 0;
+    }
+
+    .wwm-right textarea {
+        margin-left: 0;
+    }
+    
+    footer p {
+        padding-left: 0;
+        font-size: 14px;
+    }
+}
