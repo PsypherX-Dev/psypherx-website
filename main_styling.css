@@ -1,0 +1,539 @@
+@font-face {
+    font-family: Sprite;
+    src: url('assets/fonts/Sprite/SpriteGraffiti-Regular.eot');
+    src: url('assets/fonts/Sprite/SpriteGraffiti-Regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Sprite/SpriteGraffiti-Regular.woff2') format('woff2'), url('assets/fonts/Sprite/SpriteGraffiti-Regular.woff') format('woff'), url('assets/fonts/Sprite/SpriteGraffiti-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Cipher;
+    src: url("assets/fonts/PigeonCipher/PigpenCipher.otf");
+}
+
+.gutters {
+    position: relative;
+    left: 20%;
+    width: 60%;
+}
+
+/* -------------- NAVIGATION AND LOGO -------------- */
+
+.logo {
+    width: auto;
+    /* you can use % */
+    height: 90px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+body {
+    background-color: #222831;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header li,
+header a,
+header button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    background-color: #393E46;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+header:hover {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+}
+
+.nav-items li {
+    float: right;
+    margin-left: 3%;
+}
+
+/* STYLING FOR CENTER NAVIGATION ITEMS */
+
+.nav-items li a {
+    transition: all 0.3s ease 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.nav-items li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #00ff88;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-items li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-items li a:hover {
+    color: #00ffa6;
+}
+
+
+/* Don't really know what this is but it removes the cursor from next to page elements */
+
+.x-navbar .desktop .x-nav>li>a:not(.x-btn-navbar-woocommerce) {
+    cursor: none !important;
+}
+
+
+/* USER ACTION BUTTONS ON RIGHT SIDE OF SCREEN */
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(22, 187, 0, 0.8);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0;
+    margin: 0px 5px;
+}
+
+button:hover {
+    background-color: rgba(9, 255, 0, 0.8);
+}
+
+
+/* -------------- NAVIGATION AND LOGO END -------------- */
+
+
+/* -------------- MAIN START - EVERYTHING UNDER NAVIGATION ------------- */
+
+/* Main background */
+.main-bkg {
+    object-fit: cover;
+    height: 1000px;
+    position: fixed;
+    z-index: -10;
+    width: 100%;
+}
+
+/* Scroll to top button */
+@media only screen and (max-width: 1023px) {
+    #scrolltotop_parent {
+      bottom: 5px !important;
+      right: 25px !important;
+    }
+  }
+  
+  #scrolltotop_parent {
+    background: #7e7e7e;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: 1004 !important;
+    opacity: 0;
+    border-radius: 50%;
+  }
+  
+  #scrolltotop_arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    margin: 0 auto;
+    margin-top: 19px;
+  }
+
+/* Pages */
+.pages {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.page-container {
+    margin-bottom: 60px;
+    border-style: inset;
+    border-radius: 40px;
+    border-color: #00ffa6;
+    border-width: 5px;
+}
+
+/* Page background images */
+.page-bkg {
+    object-fit: cover;
+    height: 900px;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+/* Page Headings */
+.page-headings {
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    position: relative;
+}
+
+/* --- ABOUT ME PAGE --- */
+.page-about-me {
+    min-height: 900px;
+    height: 1000px;
+    color: white;
+}
+
+.page-about-me h1 {
+    font-size: 80px;
+    padding: 80px 0;
+    width: 80%;
+}
+
+.page-about-me p {
+    font-size: 25px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Remove hyperlink underline */
+.page-about-me a {
+    text-decoration: none;
+}
+
+/* Span colour */
+.pages span {
+    color: #00ffa6;
+    font-weight: bold;
+}
+
+/* --- SUCCESS STORY PAGE --- */
+.page-success-story {
+    min-height: 600px;
+    max-height: 100%;
+    background-color: #393E46;
+}
+
+.page-success-story p {
+    padding: 10px 5% 25px 5%;
+    color: white;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* --- SKILLS PAGE --- */
+.page-skills {
+    min-height: 900px;
+    max-height: 100%;
+    background-color: #393E46;
+}
+
+.skills-section {
+    position: relative;
+    width: 90%;
+    left: 5%;
+    padding-bottom: 80px;
+}
+
+.skills-left {
+    border-style: inset;
+    border-radius: 50px;
+    border-color: #00ff88;
+    border-width: 4px;
+    position: relative;
+    width: 40%;
+    left: 5%;
+    padding: 60px 30px;
+}
+
+.skills-right {
+    border-style: outset;
+    position: relative;
+    border-width: 4px;
+    border-radius: 50px;
+    border-color: #00ff88;
+    width: 40%;
+    left: 15%;
+    padding: 60px 30px;
+}
+
+.skills-section ul {
+    list-style: none;
+    color: white;
+    font-size: 25px;
+    list-style-position: inside;
+    /* padding-top: 20px; */
+}
+
+.skills-section li {
+    padding: 30px 0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.skills-section p {
+    font-size: 14px;
+}
+
+.skills-section h3 {
+    color: #00ff88;
+    top: 20px;
+    font-size: 30px;
+}
+
+.skills-left h3,
+.skills-right h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-left li,
+.skills-right li {
+    list-style-type: disc;
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: bold;
+    text-decoration: none;
+    /* Below splits the list into 2 columns */
+    float: left;
+    width: 50%;
+}
+
+.skills-right ul {
+    margin-left: 10%;
+}
+
+.skills-section .vl {
+    border-left: 5px solid grey;
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+  }
+
+/* --- EXPERIENCE & EDUCATION PAGE --- */
+.page-experience {
+    min-height: 900px;
+    height: 100%;
+    background-color: #24252A;
+    opacity: 1;
+}
+
+.bkgExp {
+    object-fit: cover;
+    width: 99%;
+    height: inherit;
+    max-height: 1295px;
+    opacity: 25%;
+    position: absolute;
+    border-radius: 40px;
+}
+
+.exp-section {
+    position: relative;
+    color: white;
+}
+
+.exp-section .vl {
+    border-left: 5px solid #00ff88;
+    height: 82%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
+.exp-section h1 {
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+
+.exp-section h2 {
+    font-size: 15px;
+    color: #00ff88;
+}
+
+.exp-section h3 {
+    font-size: 18px;
+}
+
+.exp-section p {
+    font-size: 15px;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    margin-left: 49.13%;
+    background-color: #00ff88;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.exp-left {
+    margin-left: 15%;
+    width: 30%;
+    height: 100%;
+    text-align: right;
+    margin-top: -25px;
+    padding-bottom: 30px;
+}
+
+.exp-right {
+    margin-left: 55%;
+    width: 30%;
+    height: 100%;
+    margin-top: -25px;
+    padding-bottom: 30px;
+}
+
+/* --- WORK WITH ME PAGE --- */
+.page-work-with-me {
+    height: 100%;
+    background-color: #393E46;
+    
+}
+
+.wwm-section {
+    display: flex; 
+    justify-content: center;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.wwm-section h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.wwm-section form {
+    justify-content: center;
+    width: 100%;
+}
+
+.wwm-section input {
+    margin-left: 10%;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.wwm-left {
+    width: 40%;
+    height: 100%;
+    padding: 50px 0;
+    border-style: inset;
+    border-color: #00ff88;
+    border-radius: 50px;
+}
+
+.contact-details {
+    color: #00ff88 !important;
+    margin-left: 8% !important;
+    display: inline;
+}
+
+.wwm-left label {
+    margin-left: 5%;
+    color: white;
+    font-size: 20px;
+}
+
+.wwm-right {
+    margin-left: 7.5%;
+    width: 40%;
+    height: 100%;
+    padding: 50px 0;
+    border-style: inset;
+    border-color: #00ff88;
+    border-radius: 50px;
+}
+
+.wwm-right h3 {
+    color: #00ff88;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    padding-bottom: 5px;
+}
+
+.wwm-right label {
+    margin-left: 10%;
+    color: white;
+    display: inline-block;
+    max-width: 80%;
+    font-size: 15px;
+}
+
+.wwm-right input {
+    margin-top: 10px;
+    width: 80%;
+}
+
+.wwm-right textarea {
+    margin-left: 10%; 
+    margin-top: 10px;
+    max-height: 100px; 
+    min-height: 100px; 
+    height: 100px; 
+    max-width: 80%; 
+    min-width: 80%; 
+    width: 80%;
+}
+
+
+
+/* -------------- MAIN END ------------- */
+
+/* -------------- FOOTER START ------------- */
+
+footer {
+    background-color: #393E46;
+    color: white;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* justify content -> centered the items horizontally */
+    justify-content: center;
+    /* Align items -> put p elements in the middle (vertically) of the footer section */
+    align-items: center;
+}
+
+footer p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 50px;
+}
+
+/* -------------- FOOTER END ------------- */
