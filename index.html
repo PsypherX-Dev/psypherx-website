@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main_styling.css">
     <script src="main.js" type="text/javascript"></script>
-    <title>PsyherText</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> 
+    <title>PsyherX</title>
 </head>
 
 
@@ -17,14 +19,15 @@
     <!-- <img class= "main-bkg" src="assets/images/geometry.jpg" alt="About Me" style="opacity: 80%;"> -->
 
     <!-- Navigation -->
-    <header id="navbar" onmouseover="navbarHover(true)" onmouseout="navbarHover(false)">
+    <header id="navbar" class = "" onmouseover="navbarHover(true)" onmouseout="navbarHover(false)">
         <div class="gutters">
-        <ul style="display: flex;">
-            <a href="#"><img class="logo" src="assets/images/logo.png" alt="Logo" style="padding-right: 50px;"></a>
-            <div class="nav-items">
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience & Education</a></li>
-                <li><a href="#work-with-me">Work with me</a></li>
+        <ul >
+            <a href="#"><img class="logo" src="assets/images/newtest-removebg-preview.png" alt="Logo" style="padding-right: 50px;"></a>
+            <div class="nav-items" id="myTopnav">
+                <li><a href="#skills" class="navbar-item">Skills</a></li>
+                <li><a href="#experience" class="navbar-item">Experience & Education</a></li>
+                <li><a href="#work-with-me" class="navbar-item">Work with me</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="mobileNavBar()"><i class="fa fa-bars"></i></a></li>
             </div>
         </ul>
     </div>
@@ -222,10 +225,10 @@
                     
                     <h1>Contact Details</h1>
                         <label class="contact-details">E-mail:</label>
-                        <label>norrisdarren14@gmail.com</label>
+                        <label>psypherx.dev@gmail.com</label>
                         <br style="margin-bottom: 20px;">
                         <label class="contact-details">Phone: </label>
-                        <label>076 421 7402</label>                      
+                        <label style="font-style: italic;">Please request via email</label>                      
                 </div>
                 <div class="wwm-right">
                     <form id="contactForm" action="mailto:norrisdarren14@gmail.com" method="post">
