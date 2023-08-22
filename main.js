@@ -46,3 +46,21 @@ function navbarHover (flag) {
         scrollFunction();
     }
 }
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function mobileNavBar() {
+    var x = document.getElementById("myTopnav");
+    var y = document.getElementById("navbar");
+
+    if (x.className === "nav-items") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav-items";
+    }
+
+    if (y.className === "") {
+        y.className += " responsive";
+      } else {
+        y.className = "";
+      }
+  } 
