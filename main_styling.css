@@ -13,6 +13,7 @@
     position: relative;
     left: 20%;
     width: 60%;
+    overflow-x: hidden;
 }
 
 /* -------------- NAVIGATION AND LOGO -------------- */
@@ -58,6 +59,10 @@ header:hover {
     transition: opacity 0.3s;
 }
 
+header ul {
+    display: flex;
+}
+
 .nav-items {
     list-style: none;
     display: flex;
@@ -69,6 +74,11 @@ header:hover {
 .nav-items li {
     float: right;
     margin-left: 3%;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.nav-items .icon {
+    display: none;
 }
 
 /* STYLING FOR CENTER NAVIGATION ITEMS */
@@ -148,7 +158,7 @@ button:hover {
 /* Scroll to top button */
 @media only screen and (max-width: 1023px) {
     #scrolltotop_parent {
-      bottom: 5px !important;
+      bottom: 40px !important;
       right: 25px !important;
     }
   }
@@ -170,7 +180,7 @@ button:hover {
     height: 0px;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    border-bottom: 12px solid white;
+    border-bottom: 12px solid #00ffa6;
     margin: 0 auto;
     margin-top: 19px;
   }
@@ -182,7 +192,7 @@ button:hover {
 
 .page-container {
     margin-bottom: 60px;
-    border-style: inset;
+    border-style: outset;
     border-radius: 40px;
     border-color: #00ffa6;
     border-width: 5px;
@@ -199,7 +209,7 @@ button:hover {
 
 /* Page Headings */
 .page-headings {
-    color: white;
+    color: #00ffa6;
     text-align: center;
     padding: 40px;
     font-size: 40px;
@@ -211,12 +221,13 @@ button:hover {
     min-height: 900px;
     max-height: 100%;
     color: white;
+    text-align: center;
 }
 
 .page-about-me h1 {
     font-size: 80px;
-    padding: 80px 0;
-    width: 80%;
+    padding: 100px 0;
+    width: 100%;
 }
 
 .page-about-me p {
@@ -238,7 +249,7 @@ button:hover {
 
 /* --- SUCCESS STORY PAGE --- */
 .page-success-story {
-    min-height: 600px;
+    min-height: 550px;
     max-height: 100%;
     background-color: #393E46;
 }
@@ -246,8 +257,9 @@ button:hover {
 .page-success-story p {
     padding: 10px 5% 25px 5%;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     text-align: justify;
+    text-align: center;
 }
 
 /* --- SKILLS PAGE --- */
@@ -264,6 +276,7 @@ button:hover {
     padding-bottom: 80px;
     display: flex; 
     justify-content: left; 
+    text-align: center;
 }
 
 .skills-left {
@@ -318,7 +331,7 @@ button:hover {
 }
 
 .skills-section h3 {
-    color: #00ff88;
+    color: white;
     top: 20px;
     font-size: 30px;
 }
@@ -343,7 +356,7 @@ button:hover {
 }
 
 .skills-right ul {
-    margin-left: 10%;
+    margin-left: 0;
 }
 
 .skills-section .vl {
@@ -474,7 +487,7 @@ button:hover {
 }
 
 .contact-details {
-    color: #00ff88 !important;
+    color: #00ffa6 !important;
     margin-left: 8% !important;
     display: inline;
 }
@@ -496,7 +509,7 @@ button:hover {
 }
 
 .wwm-right h3 {
-    color: #00ff88;
+    color: #00ffa6;
     display: flex;
     justify-content: center;
     font-weight: normal;
@@ -554,16 +567,156 @@ footer p {
 
 /* -------------- RESPONSIVENESS START ------------- */
 
-/* Mobile Phones */
-@media only screen and (max-width: 600px) {
-    * {
-        text-align: center;
+/* IMAGE IS ONLY VISIBLE IN FULL SCREEN */
+@media only screen and (max-width: 1900px) {
+    .bkgExp {
+        visibility: hidden;
     }
 
+    .page-experience {
+        background-color: #393E46;
+    }
+}
+
+/* MEDIUM SCREENS */
+@media only screen and (max-width: 1600px) {
+    .gutters {
+        left: 10%;
+        width: 80%;
+    }
+}
+
+/* SMALL SCREENS */
+@media only screen and (max-width: 1200px) {
+    .gutters {
+        left: 5%;
+        width: 90%;
+    }
+
+    .skills-left li,
+    .skills-right li {
+        list-style-type: none;
+        font-size: 12px;
+        padding: 5px 0;
+        /* Below resets the list into 1 column */
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* TABLETS */
+@media only screen and (max-width: 800px) {
     .gutters {
         left: 0;
         width: 100%;
     }
+
+    .exp-section .vl {
+        height: 83%;
+        left: 50.5%;
+    }
+
+    .page-about-me p {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    * {
+        text-align: center;
+    }
+
+    .dot {
+        visibility: hidden;
+    }
+
+    .vl {
+        visibility: hidden;
+    }
+
+    .exp-left {
+        margin-left: 15%;
+        width: 70%;
+        height: 100%;
+        text-align: none;
+        margin-top: -15px;
+        padding-bottom: 30px;
+    }
+    
+    .exp-right {
+        margin-left: 15%;
+        width: 70%;
+        height: 100%;
+        margin-top: -15px;
+        padding-bottom: 30px;
+    }
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 600px) {
+    .logo {
+        height: 70px;
+        padding-left: 10px;
+    }
+
+    header {
+        display: block;
+    }
+
+    header ul {
+        display: flex;
+    }
+
+    header.responsive ul {
+        display: block;
+    }
+
+    header.responsive .logo {
+        display: block;
+    }
+
+     /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    .nav-items .navbar-item {
+        display: none;
+    }
+
+    .nav-items a.icon {
+        display: block;
+        font-size: 25px;
+    }
+
+    .nav-items.responsive {
+        display: block;
+    }
+
+    .nav-items li {
+        float: none;
+        padding-top: 25px;
+    }
+
+    .nav-items a.icon {
+        padding-top: 0;
+    }
+  
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    .nav-items.responsive .navbar-item {position: relative;}
+    .nav-items.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-top: 27px;
+    }
+    
+    .nav-items.responsive .navbar-item {
+      display: block;
+      width: 100%;
+    }
+
+    .nav-items.responsive .navbar-item {
+        display: block;
+        padding: 0;
+        position: relative;
+    }  
 
     .page-headings {
         padding: 20px;
@@ -578,8 +731,6 @@ footer p {
     .page-about-me p {
         font-size: 16px;
         padding: 20px 0;
-        width: 90%;
-        margin-left: 5%;
     }
 
     .page-about-me h1 {
@@ -644,44 +795,7 @@ footer p {
         font-size: 20px;
     }
 
-    .skills-left li,
-    .skills-right li {
-        list-style-type: none;
-        font-size: 12px;
-        padding: 5px 0;
-        /* Below resets the list into 1 column */
-        float: none;
-        width: 100%;
-    }
-
-    .bkgExp {
-        visibility: hidden;
-    }
-
-    .dot {
-        visibility: hidden;
-    }
-
-    .vl {
-        visibility: hidden;
-    }
-
-    .exp-left {
-        margin-left: 15%;
-        width: 70%;
-        height: 100%;
-        text-align: none;
-        margin-top: -15px;
-        padding-bottom: 30px;
-    }
     
-    .exp-right {
-        margin-left: 15%;
-        width: 70%;
-        height: 100%;
-        margin-top: -15px;
-        padding-bottom: 30px;
-    }
 
     .exp-section h1 {
         font-size: 20px;
