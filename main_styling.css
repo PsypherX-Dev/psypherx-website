@@ -1,19 +1,13 @@
-@font-face {
-    font-family: Sprite;
-    src: url('assets/fonts/Sprite/SpriteGraffiti-Regular.eot');
-    src: url('assets/fonts/Sprite/SpriteGraffiti-Regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Sprite/SpriteGraffiti-Regular.woff2') format('woff2'), url('assets/fonts/Sprite/SpriteGraffiti-Regular.woff') format('woff'), url('assets/fonts/Sprite/SpriteGraffiti-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: Cipher;
-    src: url("assets/fonts/PigeonCipher/PigpenCipher.otf");
-}
-
 .gutters {
     position: relative;
     left: 20%;
     width: 60%;
     overflow-x: hidden;
+}
+
+iframe {
+    position: fixed;
+    width: 100%;
 }
 
 /* -------------- NAVIGATION AND LOGO -------------- */
@@ -149,10 +143,11 @@ button:hover {
 /* Main background */
 .main-bkg {
     object-fit: cover;
-    height: 1000px;
+    height: 100%;
     position: fixed;
     z-index: -10;
     width: 100%;
+    opacity: 0.35;
 }
 
 /* Scroll to top button */
@@ -285,9 +280,10 @@ button:hover {
     border-color: #00ff88;
     border-width: 4px;
     position: relative;
-    width: 40%;
-    left: 5%;
+    width: 45%;
+    left: 2%;
     padding: 60px 30px;
+    text-align: left;
 }
 
 .skills-hr {
@@ -307,9 +303,10 @@ button:hover {
     border-width: 4px;
     border-radius: 50px;
     border-color: #00ff88;
-    width: 40%;
-    left: 15%;
+    width: 45%;
+    left: 8%;
     padding: 60px 30px;
+    text-align: left;
 }
 
 .skills-section ul {
@@ -317,7 +314,6 @@ button:hover {
     color: white;
     font-size: 25px;
     list-style-position: inside;
-    /* padding-top: 20px; */
 }
 
 .skills-section li {
@@ -355,8 +351,9 @@ button:hover {
     width: 50%;
 }
 
-.skills-right ul {
-    margin-left: 0;
+.skills-right ul,
+.skills-left ul {
+    margin-left: 5%;
 }
 
 .skills-section .vl {
@@ -452,6 +449,48 @@ button:hover {
     
 }
 
+.gifs-container {
+    width: 100%;
+    margin-left: 0%;
+    padding: 20px;
+}
+
+.gifs-container button {
+    margin-left: 33%;
+    width: 33%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #00ff88;
+    opacity: 0.5;
+    font-size: 18px;
+}
+
+.gifs-container button:hover {
+    opacity: 1;
+}
+
+.gifs-container ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.gifs-container li {
+    width: 80%;
+    padding: 10px;
+    
+}
+
+.gifs-container img {
+    border-style: groove;
+    border-width: 2px;
+    border-color: #00ff88;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
 .wwm-section {
     display: flex; 
     justify-content: center;
@@ -478,18 +517,35 @@ button:hover {
 }
 
 .wwm-left {
+    width: 95%;
+    height: 100%;
+    padding: 50px 0;
+    border-style: inset;
+    border-color: #00ff88;
+    border-radius: 50px;
+    text-align: left;
+}
+
+/* OLD FORM CODE */
+/* .wwm-left {
     width: 40%;
     height: 100%;
     padding: 50px 0;
     border-style: inset;
     border-color: #00ff88;
     border-radius: 50px;
-}
+} */
 
 .contact-details {
     color: #00ffa6 !important;
-    margin-left: 8% !important;
+    margin-left: 31% !important;
+    /* margin-left: 8% !important; -- OLD FORM CODE */
     display: inline;
+}
+
+.linkedin-img {
+    width: 10%;
+    margin-left: 40%;
 }
 
 .wwm-left label {
@@ -498,7 +554,8 @@ button:hover {
     font-size: 20px;
 }
 
-.wwm-right {
+/* OLD FORM CODE */
+/* .wwm-right {
     margin-left: 7.5%;
     width: 40%;
     height: 100%;
@@ -506,7 +563,7 @@ button:hover {
     border-style: inset;
     border-color: #00ff88;
     border-radius: 50px;
-}
+} */
 
 .wwm-right h3 {
     color: #00ffa6;
@@ -538,6 +595,17 @@ button:hover {
     max-width: 80%; 
     min-width: 80%; 
     width: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.wwm-section button {
+    margin: 25px 0 -20px 35%;
+    width: 30%;
+    font-size: 16px;
+    text-decoration: underline;
+    color: white;
+    
 }
 
 
@@ -603,6 +671,15 @@ footer p {
         width: 100%;
         text-align: center;
     }
+
+    .contact-details {
+        margin-left: 25% !important;
+    }
+
+    .linkedin-img {
+        width: 15%;
+        margin-left: 37%;
+    }
 }
 
 /* TABLETS */
@@ -610,6 +687,10 @@ footer p {
     .gutters {
         left: 0;
         width: 100%;
+    }
+
+    .main-bkg {
+        visibility: hidden;
     }
 
     .exp-section .vl {
@@ -649,6 +730,40 @@ footer p {
         height: 100%;
         margin-top: -15px;
         padding-bottom: 30px;
+    }
+
+    .gifs-container {
+        width: 100%;
+        margin-left: 0%;
+        padding: 20px;
+    }
+    
+    .gifs-container button {
+        margin-left: 0%;
+        width: 50%;
+    }
+    
+    .gifs-container ul {
+        display: block;
+    }
+    
+    .gifs-container li {
+        width: 90%;
+        margin-left: 5%; 
+    }
+
+    /* OLD FORM - NEW CODE */
+    .wwm-left {
+        width: 90%;
+    }
+
+    .contact-details {
+        margin-left: 20% !important;
+    }
+
+    .linkedin-img {
+        width: 20%;
+        margin-left: 35%;
     }
 }
 
@@ -717,6 +832,15 @@ footer p {
         padding: 0;
         position: relative;
     }  
+    
+    .nav-items li a:after {
+        background: none;
+        transition: none;
+    }
+    
+    .nav-items li a:hover {
+        color: white;
+    }
 
     .page-headings {
         padding: 20px;
@@ -767,7 +891,9 @@ footer p {
         padding: 0;
     }
 
+    .skills-right ul,
     .skills-left ul {
+        margin-left: 0;
         padding-top: 30px;
     }
 
@@ -831,6 +957,7 @@ footer p {
         height: 100%;
         padding: 30px 0;
         border-style: none;
+        text-align: center;
     }
     
     .wwm-right {
@@ -854,9 +981,22 @@ footer p {
         font-size: 14px;
     }
 
+    .gifs-container button {
+        width: 80%;
+    }
+
+    .gifs-container li {
+        width: 100%;
+        margin-left: 0;
+    }
+
     .contact-details {
         margin-left: 0% !important;
         display: inline;
+    }
+
+    .linkedin-img {
+        margin-left: 0%;
     }
 
     .wwm-right h3 {
