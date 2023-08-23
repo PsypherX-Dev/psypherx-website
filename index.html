@@ -9,15 +9,13 @@
     <script src="main.js" type="text/javascript"></script>
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> 
-    <title>PsyherX</title>
+    <title>PsypherX</title>
 </head>
 
 
 <body>
-
-    <!-- Main background image -->
+    <img src="assets/images/Untitled.jpg" alt="" class="main-bkg">
     <!-- <img class= "main-bkg" src="assets/images/geometry.jpg" alt="About Me" style="opacity: 80%;"> -->
-
     <!-- Navigation -->
     <header id="navbar" class = "" onmouseover="navbarHover(true)" onmouseout="navbarHover(false)">
         <div class="gutters">
@@ -32,7 +30,7 @@
         </ul>
     </div>
     </header>
-
+    
     <div class="pages gutters">
         <!-- Scroll to top button -->
         <div id="scrolltotop_parent" onclick="scrollToTop()">
@@ -44,7 +42,7 @@
         <div class="page-about-me" style="padding-top: 0px;">
             <h1><span>W</span>elcome <span>T</span>o <span>P</span>sypher<span>X</span></h1>
             <p>The official portfolio website for <span>Darren Norris</span>.</p>
-            <p>I am a experienced professional Developer having acquired a <span>Bachelors Degree in Computer and Information Sciences (Cum Laude)</span>, double majoring 
+            <p>I am a experienced professional Developer having acquired a <span>Bachelors Degree in Computer and Information Sciences</span>, double majoring 
                 in <span>Software Development</span> and <span>Network Security</span>.</p>
             <p>I have a wide range of skills related to <span>Software, Web and Game development</span>.</p>
             <p>Below you can view my career experience and education. Should you be interested in my work and would like to get in contact, please 
@@ -126,16 +124,16 @@
                 <div class="skills-left">
                     <h3>Tools & Softwares</h3>
                     <ul>
-                        <li>Tortoise SVN</li>
-                        <li>Git & GitHub</li>
                         <li>Slack</li>
-                        <li>Microsoft Teams</li>
+                        <li>Git & GitHub</li>
                         <li>Webstorm</li>
                         <li>Visual Studio</li>
-                        <li>Visual Studio Code</li>
                         <li>Photoshop</li>
-                        <li>Microsoft Office Suite</li>
+                        <li>Microsoft Teams</li>
                         <li>Google Drive</li>
+                        <li>Visual Studio Code</li>
+                        <li>Tortoise SVN</li>
+                        <li>Microsoft Office Suite</li>
                     </ul>
                 </div>
 
@@ -144,16 +142,14 @@
                 <div class="skills-right">
                     <h3>Languages</h3>
                     <ul>
-                        <li>JavaScript</li>
-                        <li>HTML & CSS</li>
                         <li>C#</li>
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
                         <li>Java</li>
                         <li>Node JS</li>
                         <li>SQL</li>
                         <li>React JS</li>
-                        <li>Express & Angular</li>
                         <li>Bootstrap</li>
-                        <li>Python</li>
                     </ul>
                 </div>
             </div>
@@ -220,28 +216,45 @@
             <!-- WORK WITH ME PAGE -->
         <div id="work-with-me" class="page-work-with-me page-container">
             <h1 class="page-headings">WORK WITH ME</h1>
+            <p style="color: white; text-align: center; font-size: 14px; width: 90%; margin-left: 5%; font-style: italic;">*Please note that the games showcased below are 
+                collaborative efforts, reflecting the combined work of a dedicated team in their finalization.</p>
+            <div class="gifs-container">
+                <ul>
+                    <li>
+                        <img src="assets/gifs/TaikoBeats.gif" alt="">
+                    </li>
+                    <li>
+                        <img src="assets/gifs/SojuBomb.gif" alt="">
+                    </li>
+                </ul>
+                <a href="https://habanerosystems.com/games" target="_blank"><button>Play Habanero Games</button></a>
+            </div>
+
             <div class="wwm-section">
                 <div class="wwm-left">
-                    
                     <h1>Contact Details</h1>
-                        <label class="contact-details">E-mail:</label>
-                        <label>psypherx.dev@gmail.com</label>
-                        <br style="margin-bottom: 20px;">
-                        <label class="contact-details">Phone: </label>
-                        <label style="font-style: italic;">Please request via email</label>                      
+                    <label class="contact-details">E-mail:</label>
+                    <label>psypherx.dev@gmail.com</label>
+                    <br style="margin-bottom: 20px;">
+                    <!-- <label class="contact-details">LinkedIn: </label> -->
+                    <label><a href="https://za.linkedin.com/in/darren-norris-02139a162?trk=people-guest_people_search-card" target="_blank"><img src="assets/images/LinkedInLogo.png" alt="LinedIn Profile" class="linkedin-img"></a></label> 
+                    
                 </div>
-                <div class="wwm-right">
-                    <form id="contactForm" action="mailto:norrisdarren14@gmail.com" method="post">
+
+                <!-- NOTE: Removed form below due to email functionality complications. CSS will be changed but original will be kept -->
+                <!-- <div class="wwm-right">
+                    <form id="contactForm" action="thisFile.php" method="post">
                         <h3>Alternatively,</h3>
                         <h1>Fill out the form below</h1>
                         <label>Please enter your <span>Name</span> and <span>Surname</span></label>
                         <input type="text" name="name" id="name" placeholder="Name"/>
                         <label><span>Why</span> are you getting in contact?</label>
-                        <input type="email" name="subject" id="subject" placeholder="Subject"/>
+                        <input type="text" name="subject" id="subject" placeholder="Subject"/>
                         <label>Describe the <span>Work</span> and <span>Skills</span> that you require</label>
                         <textarea type="text" name="message" id="message" placeholder="Message"></textarea>
+                        <button type="submit">Submit</button>
                     </form>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -249,7 +262,7 @@
     <!-- FOOTER -->
     <footer>
         <!-- <img src="assets/images/logo.png" alt="Logo" style="max-height: 75px; padding: 10px;"> -->
-        <p>This site was developed by <span style="color: #00ffa6;">Darren Norris</span></p>
+        <p style="cursor: default;">This site was developed by <span style="color: #00ffa6;">Darren Norris</span></p>
     </footer>
 
 
