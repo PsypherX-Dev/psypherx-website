@@ -983,6 +983,7 @@ footer p {
 
     .gifs-container button {
         width: 80%;
+        opacity: 1;
     }
 
     .gifs-container li {
@@ -997,6 +998,7 @@ footer p {
 
     .linkedin-img {
         margin-left: 0%;
+        margin-top: 20px;
     }
 
     .wwm-right h3 {
