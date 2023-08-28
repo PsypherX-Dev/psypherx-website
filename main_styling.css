@@ -14,7 +14,6 @@ iframe {
 
 .logo {
     width: auto;
-    /* you can use % */
     height: 90px;
     cursor: pointer;
     padding: 10px 0;
@@ -111,8 +110,7 @@ header ul {
 }
 
 
-/* Don't really know what this is but it removes the cursor from next to page elements */
-
+/* removes the cursor from next to page elements */
 .x-navbar .desktop .x-nav>li>a:not(.x-btn-navbar-woocommerce) {
     cursor: none !important;
 }
@@ -526,20 +524,9 @@ button:hover {
     text-align: left;
 }
 
-/* OLD FORM CODE */
-/* .wwm-left {
-    width: 40%;
-    height: 100%;
-    padding: 50px 0;
-    border-style: inset;
-    border-color: #00ff88;
-    border-radius: 50px;
-} */
-
 .contact-details {
     color: #00ffa6 !important;
     margin-left: 31% !important;
-    /* margin-left: 8% !important; -- OLD FORM CODE */
     display: inline;
 }
 
@@ -553,17 +540,6 @@ button:hover {
     color: white;
     font-size: 20px;
 }
-
-/* OLD FORM CODE */
-/* .wwm-right {
-    margin-left: 7.5%;
-    width: 40%;
-    height: 100%;
-    padding: 50px 0;
-    border-style: inset;
-    border-color: #00ff88;
-    border-radius: 50px;
-} */
 
 .wwm-right h3 {
     color: #00ffa6;
